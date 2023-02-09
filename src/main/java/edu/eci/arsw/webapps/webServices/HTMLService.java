@@ -1,24 +1,24 @@
-package edu.eci.arsw.webapps;
+package edu.eci.arsw.webapps.webServices;
 
-import edu.eci.arsw.RestService;
+import java.io.FileReader;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 
-public class CSSService  implements RestService {
+public class HTMLService implements RestService {
+
 
     @Override
     public String getHeader() {
         return "HTTP/1.1 200 OK\r\n" +
-                "Content-Type: text/css \r\n" +
+                "Content-Type: text/html \r\n" +
                 "\r\n";
     }
 
     @Override
     public String getResponse() {
         StringBuilder sb = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/style.css"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/index.html"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 sb.append(line);
@@ -30,6 +30,5 @@ public class CSSService  implements RestService {
         System.out.println(sb.toString());
         return sb.toString();
     }
-
 
 }

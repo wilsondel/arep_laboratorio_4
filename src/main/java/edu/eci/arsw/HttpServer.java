@@ -2,6 +2,7 @@ package edu.eci.arsw;
 
 import edu.eci.arsw.repository.Cache;
 import edu.eci.arsw.service.HttpConnection;
+import edu.eci.arsw.webapps.webServices.RestService;
 
 import java.net.*;
 import java.io.*;
@@ -47,7 +48,6 @@ public  void run(String[] args) throws IOException {
                 System.err.println("Accept failed.");
                 System.exit(1);
             }
-
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(
@@ -98,6 +98,7 @@ public  void run(String[] args) throws IOException {
 
         serverSocket.close();
     }
+
 
     public String executeService(String serviceName) {
         RestService rs = services.get(serviceName);

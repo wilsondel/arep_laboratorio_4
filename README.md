@@ -18,6 +18,16 @@ Posteriormente ingresando a localhost:35000 se puede ver:
 
 ![img_1.png](img/img_1.png)
 
+Luego, puedes ingresar a http://localhost:35000/apps/hello donde podrás encontrar
+
+![img.png](img/img_6.png)
+
+Dando click sobre el botón se ve que sale una venta lo que junto con el color del background nos permite evidenciar el
+correcto funcionamiento de los servicios para retornar HTML, CSS y JS del servidor.
+
+![img_1.png](img/img_7.png)
+
+
 
 ## Corriendo tests
 
