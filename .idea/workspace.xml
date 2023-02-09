@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c4fb6ef-59c5-4af7-90cf-b0747e2b2e47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/CSSService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/HTMLService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/JSService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/HelloService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/RestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/RestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/HelloService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CacheTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LQmr2L91KaHEcTVubs6549WzbQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Downloads/visualvm_215/bin/visualvm.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Users\User\Documents\1ECI\0s9\AREP\t1\labs\2\arep_laboratorio_1-main\src\main\resources" />
+      <recent name="E:\Users\User\Documents\1ECI\0s9\AREP\t1\labs\2\arep_laboratorio_1-main\src\main" />
+      <recent name="E:\Users\User\Documents\1ECI\0s9\AREP\t1\labs\2\arep_laboratorio_1-main\src\main\java" />
+      <recent name="E:\Users\User\Documents\1ECI\0s9\AREP\t1\labs\2\arep_laboratorio_1-main\src\main\java\edu\eci\arsw" />
+      <recent name="E:\Users\User\Documents\1ECI\0s9\AREP\t1\labs\2\arep_laboratorio_1-main\src\main\java\edu\eci\arsw\webapps" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FirstApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.webapps.FirstApp" />
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.eci.arsw.webapps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FirstApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c4fb6ef-59c5-4af7-90cf-b0747e2b2e47" name="Changes" comment="" />
+      <created>1675811885318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675811885318</updated>
+      <workItem from="1675811895022" duration="4977000" />
+      <workItem from="1675893655549" duration="7672000" />
+      <workItem from="1675951588338" duration="5403000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/arep_laboratorio_1_main$FirstApp.ic" NAME="FirstApp Coverage Results" MODIFIED="1675909617749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.eci.arsw.webapps.*</FILTER>
+    </SUITE>
+  </component>
+</project>

@@ -82,11 +82,12 @@ public  void run(String[] args) throws IOException {
             }
 
             outputLine="";
-            if (basePathForm.getPath().contains("/apps/")) {
+            if (basePathForm.getPath().contains("/apps/")) { // localhost:35000/apps/hello
                 outputLine = executeService(basePathForm.getPath().substring(5)); // /apps/hello toma solo hello
+            } else {
+                outputLine = htmlWithForms(apiResponse);
             }
 
-//            outputLine = htmlWithForms(apiResponse);
 
             out.println(outputLine);
 
@@ -111,7 +112,7 @@ public  void run(String[] args) throws IOException {
 
     public static String jsonSimple(String jsonResponse) {
         return  "HTTP/1.1 200 OK\r\n" +
-                "Content-Type: application/json" +
+                "Content-Type: application/json \r\n" +
                 "\r\n"
                 +
                 jsonResponse;

@@ -25,7 +25,11 @@ public class FirstApp {
                     }
                 }
         );
-        server.addService("/hello",new HelloService());
+
+        server.addService("/hello",new HTMLService());
+        server.addService("/style",new CSSService());
+        server.addService("/javascript",new JSService());
+        server.addService("/image",new ImageService());
         server.run(args);
     }
 
