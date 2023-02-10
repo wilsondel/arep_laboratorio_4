@@ -1,6 +1,7 @@
 # Taller 2
 
-Aplicación para consultar la información de películas de cine.  La aplicación recibe una frase de búsqueda del título, por ejemplo “Guardians of the galaxy”  y muestra los datos de la película correspondiente.
+Servidor que lee los archivos del disco local y retornar todos los archivos solicitados, incluyendo páginas html, archivos java script, css e imágenes.
+La aplicación incluye la comunicación asíncrona con unos servicios REST.
 
 
 ### Instalando
