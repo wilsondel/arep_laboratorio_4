@@ -126,9 +126,9 @@ public  void run(String[] args) throws IOException {
     }
 
     public String executeServiceSparkPublic(String fileName) {
-        String response = jsonSimple("{\"message\":\"File not found\"}");
-
+        String response = "";
         String header = "";
+
         System.out.println("NOMBRE DEL ARCHIVO: " + fileName);
         try {
             if (fileName.contains("html")) {
@@ -138,6 +138,8 @@ public  void run(String[] args) throws IOException {
 
             } else if (fileName.contains("js")) {
                 header = selectHeader("js");
+            } else {
+                return jsonSimple("{\"message\":\"File not found\"}");
             }
             response = readFile(fileName);
         } catch (IOException e) {

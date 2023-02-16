@@ -29,7 +29,49 @@ correcto funcionamiento de los servicios para retornar HTML, CSS y JS del servid
 
 ![img_1.png](img/img_7.png)
 
-Ahora, 
+Ahora, se valida el registro de servicios get y post usando funciones lambda.
+Para validar los servicios get se ingresa a  http://localhost:35000/spark/spark:
+
+![img.png](img/img_11.png)
+
+O también a http://localhost:35000/spark/mytestla cual lee y retorna un archivo del servidor 
+
+![img_1.png](img/img_10.png)
+
+Para validar los servicios post se ingresa a  http://localhost:35000/spark/post:
+
+![img_2.png](img/img_20.png)
+
+Se envían los datos, y se evidencia una respuesta por part del servidor con los datos ingresados:
+
+![img_3.png](img/img_30.png)
+
+La configuración de archivos estáticos se realiza con 
+
+```
+staticFiles("/public");
+```
+
+en FirstApp, para probarlo se puede ingresar a las siguientes rutas que traeran archivos json,js,css,html respectivamente:
+
+![img_4.png](img/img_40.png)
+
+![img_5.png](img/img_50.png)
+
+![img_6.png](img/img_60.png)
+
+![img_7.png](img/img_70.png)
+
+Para cambiar el tipo de respuesta por application/json se realiza por ejemplo:
+
+```
+get("/message", "application/json",(request,response) -> new JSONSparkTestService().getResponse(request, response) );
+```
+
+Y se evidencia accediendo a:
+
+![img_8.png](img/img_80.png)
+
 
 ## Corriendo tests
 
@@ -48,12 +90,6 @@ Para las pruebas se hizo uso del nombramiento given_When_Then
 ```
 givenAvalueWhenSaveInCacheThenReturnIt()
 ```
-
-## Diseño
-
-
-
-
 
 ## Built With
 
