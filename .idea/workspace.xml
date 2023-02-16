@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4fb6ef-59c5-4af7-90cf-b0747e2b2e47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkTestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/RestServiceSpark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/myTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/CSSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/CSSService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/HTMLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/HTMLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/JSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/JSService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/RestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/CSSService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/HTMLService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/ImageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/JSService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/RestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CacheTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +89,7 @@
       <workItem from="1675811895022" duration="4977000" />
       <workItem from="1675893655549" duration="7672000" />
       <workItem from="1675951588338" duration="15366000" />
-      <workItem from="1676513596042" duration="2642000" />
+      <workItem from="1676513596042" duration="3033000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,9 @@
-# Taller 2
+# Taller 3
 
-Servidor que lee los archivos del disco local y retornar todos los archivos solicitados, incluyendo páginas html, archivos java script, css e imágenes.
-La aplicación incluye la comunicación asíncrona con unos servicios REST.
-
+Se construye un servidor web para soportar una funcionalidad similar a la de Spark. 
+La aplicación permite el registro de servicios get y post usando funciones lambda. 
+Permite configurar el directorio de los archivos estáticos, y 
+cambiar el tipo de la respuesta a "application/json".
 
 ### Instalando
 Descarga o clona el repositorio y ejecuta
