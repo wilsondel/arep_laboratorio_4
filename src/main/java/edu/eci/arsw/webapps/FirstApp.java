@@ -9,6 +9,7 @@ import edu.eci.arsw.webapps.webServices.normalService.JSService;
 import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkPostService;
 import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkService;
 import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkTestService;
+import edu.eci.arsw.webapps.webServices.sparkService.JSONSparkTestService;
 
 import java.io.IOException;
 
@@ -27,6 +28,7 @@ public class FirstApp {
         get("/spark", (request,response) -> new HTMLSparkService().getResponse(request, response) );
         get("/mytest", (request,response) -> new HTMLSparkTestService().getResponse(request, response) );
         post("/post", (request,response) -> new HTMLSparkPostService().getResponse(request, response) );
+        get("/message", "application/json",(request,response) -> new JSONSparkTestService().getResponse(request, response) );
         server.run(args);
     }
 

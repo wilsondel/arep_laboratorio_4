@@ -195,6 +195,12 @@ public  void run(String[] args) throws IOException {
         servicesSpark.put(key,service);
     }
 
+    public static void get(String key, String type,RestServiceSpark service) {
+        if (type.equals("application/json")) {
+            servicesSpark.put(key,service);
+        }
+    }
+
 
     public static void post(String key, RestServiceSpark service) {
         servicesSpark.put(key,service);
