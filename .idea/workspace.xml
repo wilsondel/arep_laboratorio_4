@@ -5,42 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4fb6ef-59c5-4af7-90cf-b0747e2b2e47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkTestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/sparkService/RestServiceSpark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/myTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/RestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/CSSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/CSSService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/HTMLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/HTMLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/ImageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/JSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/JSService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/django.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/django.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/CSSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/CSSService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/HTMLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/HTMLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/JSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/JSService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/webServices/normalService/RestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/ClientJavaTesting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/RestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/RestService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/CSSService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/CSSService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/HTMLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/HTMLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/ImageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/JSService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/JSService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CacheTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/CacheTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/HttpConnectionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/HttpConnectionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CacheTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-CacheTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-HttpConnectionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-HttpConnectionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/CSSService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/HTMLService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/ImageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/JSService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/RestService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CacheTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" afterDir="false" />
     </list>
@@ -52,7 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -76,6 +66,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -95,10 +86,10 @@
   <component name="RunManager">
     <configuration name="FirstApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.webapps.FirstApp" />
-      <module name="lab" />
+      <module name="arep_laboratorio_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.eci.arsw.webapps.webServices.*" />
+          <option name="PATTERN" value="edu.eci.arsw.webapps.webServices.normalService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,6 +114,7 @@
       <workItem from="1675811895022" duration="4977000" />
       <workItem from="1675893655549" duration="7672000" />
       <workItem from="1675951588338" duration="15366000" />
+      <workItem from="1676513596042" duration="2642000" />
     </task>
     <servers />
   </component>

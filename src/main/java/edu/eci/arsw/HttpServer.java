@@ -2,7 +2,8 @@ package edu.eci.arsw;
 
 import edu.eci.arsw.repository.Cache;
 import edu.eci.arsw.service.HttpConnection;
-import edu.eci.arsw.webapps.webServices.RestService;
+import edu.eci.arsw.webapps.webServices.normalService.RestService;
+import edu.eci.arsw.webapps.webServices.sparkService.RestServiceSpark;
 
 import java.net.*;
 import java.io.*;
@@ -19,6 +20,10 @@ public class HttpServer {
     private static HttpServer _instance = new HttpServer(); //se carga la clase
 
     private HttpServer() { }
+
+    private static Map<String, RestServiceSpark> servicesSpark = new HashMap<>();
+
+    public static String staticFilesLocation;
 
     public static HttpServer getInstance() { // implementacion singleton
         return _instance;
@@ -84,6 +89,8 @@ public  void run(String[] args) throws IOException {
             outputLine="";
             if (basePathForm.getPath().contains("/apps/")) { // localhost:35000/apps/hello
                 outputLine = executeService(basePathForm.getPath().substring(5)); // /apps/hello toma solo hello
+            } else if (basePathForm.getPath().contains("/spark/")) {
+                outputLine = executeServiceSpark(basePathForm.getPath().substring(6));
             } else {
                 outputLine = htmlWithForms(apiResponse);
             }
@@ -107,9 +114,25 @@ public  void run(String[] args) throws IOException {
         return header + body;
     }
 
+    public String executeServiceSpark(String serviceName) {
+        RestServiceSpark rs = servicesSpark.get(serviceName);
+        String response = rs.getResponse("","");
+        return response;
+    }
+
     public void addService(String key, RestService service) {
     services.put(key, service);
     }
+
+    public static void get(String key, RestServiceSpark service) {
+        servicesSpark.put(key,service);
+    }
+
+    public static void staticFiles(String location) {
+        staticFilesLocation = location;
+    }
+
+
 
     public static String jsonSimple(String jsonResponse) {
         return  "HTTP/1.1 200 OK\r\n" +

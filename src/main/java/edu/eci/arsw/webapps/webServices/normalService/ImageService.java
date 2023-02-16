@@ -1,4 +1,4 @@
-package edu.eci.arsw.webapps.webServices;
+package edu.eci.arsw.webapps.webServices.normalService;
 
 import java.io.*;
 

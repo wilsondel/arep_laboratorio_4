@@ -1,22 +1,16 @@
-package edu.eci.arsw.webapps.webServices;
-
-import java.io.FileReader;
+package edu.eci.arsw.webapps.webServices.sparkService;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
-public class HTMLService implements RestService {
-
-
+public class HTMLSparkService implements  RestServiceSpark{
     @Override
-    public String getHeader() {
-        return "HTTP/1.1 200 OK\r\n" +
+    public String getResponse(String request, String response) {
+        String header = "HTTP/1.1 200 OK\r\n" +
                 "Content-Type: text/html \r\n" +
                 "\r\n";
-    }
 
-    @Override
-    public String getResponse() {
         StringBuilder sb = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/index.html"))) {
             String line;
@@ -28,7 +22,7 @@ public class HTMLService implements RestService {
             e.printStackTrace();
         }
         System.out.println(sb.toString());
-        return sb.toString();
+        return header + "<html><body><h1>Hola, mundo!</h1></body></html>";
+//        return header + sb.toString();
     }
-
 }
