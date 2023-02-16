@@ -29,7 +29,7 @@ correcto funcionamiento de los servicios para retornar HTML, CSS y JS del servid
 
 ![img_1.png](img/img_7.png)
 
-
+Ahora, 
 
 ## Corriendo tests
 
@@ -51,30 +51,8 @@ givenAvalueWhenSaveInCacheThenReturnIt()
 
 ## Diseño
 
-Teniendo en cuenta la arquitectura propuesta: 
-
-![img.png](img/img.png)
-
-El diseño implementado en la aplicación es:
-
-![img_3.png](img/img_3.png)
-
-Donde se tiene también la clase ClientJavaTesting para realizar los llamados al servidor HttpServer.
-
-Para ejemplificar la búsqueda del nombre de una película se tiene:
-
-![img_4.png](img/img_4.png)
 
 
-### Ejemplo extensibilidad
-Se puede extender las funcionalidades del caché para así poder aumentar el rendimiento de la aplicación. Por ejemplo si se quiere adicionar una funcionalidad de limpiar el caché o de guardar en el caché el título, con respuesta y hora para luego poder actualizar con nueva información si la información ya es obsoleta.
-
-
-![img_5.png](img/img_5.png)
-
-
-### Ejemplo para que una función que sea implementada por otro proveedor
-Por ejemplo el método getAPIInfo de HttpConnection, podría ser accedido teniendo un punto de acceso en HttpServer, exponiéndolo así como un servicio para los clientes que hagan peticiones a este. 
 
 
 ## Built With

@@ -23,7 +23,7 @@ public class HttpServer {
 
     private static Map<String, RestServiceSpark> servicesSpark = new HashMap<>();
 
-    public static String staticFilesLocation;
+    public static String staticFilesLocation = "/public";
 
     public static HttpServer getInstance() { // implementacion singleton
         return _instance;
@@ -90,7 +90,10 @@ public  void run(String[] args) throws IOException {
             if (basePathForm.getPath().contains("/apps/")) { // localhost:35000/apps/hello
                 outputLine = executeService(basePathForm.getPath().substring(5)); // /apps/hello toma solo hello
             } else if (basePathForm.getPath().contains("/spark/")) {
-                outputLine = executeServiceSpark(basePathForm.getPath().substring(6));
+                outputLine = executeServiceSpark(basePathForm.getPath().substring(6),basePathForm.getQuery());
+            } else if (basePathForm.getPath().contains("/public/")) {
+                outputLine = executeServiceSparkPublic(basePathForm.getPath().substring(7));
+
             } else {
                 outputLine = htmlWithForms(apiResponse);
             }
@@ -114,10 +117,74 @@ public  void run(String[] args) throws IOException {
         return header + body;
     }
 
-    public String executeServiceSpark(String serviceName) {
+    public String executeServiceSpark(String serviceName, String query) {
+        System.out.println("this is the query: " + query);
         RestServiceSpark rs = servicesSpark.get(serviceName);
-        String response = rs.getResponse("","");
+
+        String response = rs.getResponse(query,"");
         return response;
+    }
+
+    public String executeServiceSparkPublic(String fileName) {
+        String response = jsonSimple("{\"message\":\"File not found\"}");
+
+        String header = "";
+        System.out.println("NOMBRE DEL ARCHIVO: " + fileName);
+        try {
+            if (fileName.contains("html")) {
+                header = selectHeader("html");
+            } else if (fileName.contains("css")) {
+                header = selectHeader("css");
+
+            } else if (fileName.contains("js")) {
+                header = selectHeader("js");
+            }
+            response = readFile(fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return header + response;
+    }
+
+    public static String readFile(String fileName) throws IOException {
+        StringBuilder content = new StringBuilder();
+        BufferedReader reader = new BufferedReader(new FileReader("src/main/resources"+staticFilesLocation+"/" + fileName));
+        try {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                content.append(line).append("\n");
+            }
+        } finally {
+            reader.close();
+        }
+        return content.toString();
+    }
+
+    public String selectHeader(String type) {
+        switch (type) {
+            case "html":
+                return "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: text/html \r\n" +
+                        "\r\n";
+            case "css":
+                return "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: text/css \r\n" +
+                        "\r\n";
+            case "js":
+                return "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: application/javascript \r\n" +
+                        "\r\n";
+            case "json":
+                return "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: application/json \r\n" +
+                        "\r\n";
+
+            default:
+                return "HTTP/1.1 200 OK\r\n" +
+                        "Content-Type: text/html \r\n" +
+                        "\r\n";
+        }
     }
 
     public void addService(String key, RestService service) {
@@ -125,6 +192,11 @@ public  void run(String[] args) throws IOException {
     }
 
     public static void get(String key, RestServiceSpark service) {
+        servicesSpark.put(key,service);
+    }
+
+
+    public static void post(String key, RestServiceSpark service) {
         servicesSpark.put(key,service);
     }
 
@@ -148,7 +220,6 @@ public  void run(String[] args) throws IOException {
      * @return a String representing the html response
      */
     public static String htmlWithForms(String apiResponse) {
-        System.out.println("RESPOINSEEE :" + apiResponse);
 
         return "HTTP/1.1 200 OK\r\n" +
                 "Content-Type: text/html" +

@@ -11,18 +11,6 @@ public class HTMLSparkService implements  RestServiceSpark{
                 "Content-Type: text/html \r\n" +
                 "\r\n";
 
-        StringBuilder sb = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/index.html"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-                sb.append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(sb.toString());
         return header + "<html><body><h1>Hola, mundo!</h1></body></html>";
-//        return header + sb.toString();
     }
 }

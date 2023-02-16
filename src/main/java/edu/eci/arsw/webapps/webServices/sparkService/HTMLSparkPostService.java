@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class HTMLSparkTestService implements  RestServiceSpark{
+public class HTMLSparkPostService implements  RestServiceSpark{
 
     HttpServer server = HttpServer.getInstance();
 
@@ -16,8 +16,16 @@ public class HTMLSparkTestService implements  RestServiceSpark{
                 "Content-Type: text/html \r\n" +
                 "\r\n";
 
+        if (request != null) {
+            System.out.println("LOS DATOS ENVIADOS FUERON: " + request);
+            header = "HTTP/1.1 200 OK\r\n" +
+                    "Content-Type: application/json \r\n" +
+                    "\r\n";
+            return header + "{\"message\":\"Data was sent\", \"name\": \""+ request.substring(5) +"\"}";
+        }
+
         StringBuilder sb = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources"+server.staticFilesLocation+"/myTest.html"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources"+server.staticFilesLocation+"/post.html"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 sb.append(line);
@@ -29,4 +37,5 @@ public class HTMLSparkTestService implements  RestServiceSpark{
         System.out.println(sb.toString());
         return header + sb.toString();
     }
+
 }

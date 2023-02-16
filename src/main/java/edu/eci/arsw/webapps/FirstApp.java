@@ -6,6 +6,7 @@ import edu.eci.arsw.webapps.webServices.normalService.CSSService;
 import edu.eci.arsw.webapps.webServices.normalService.HTMLService;
 import edu.eci.arsw.webapps.webServices.normalService.ImageService;
 import edu.eci.arsw.webapps.webServices.normalService.JSService;
+import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkPostService;
 import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkService;
 import edu.eci.arsw.webapps.webServices.sparkService.HTMLSparkTestService;
 
@@ -25,6 +26,7 @@ public class FirstApp {
         staticFiles("/public");
         get("/spark", (request,response) -> new HTMLSparkService().getResponse(request, response) );
         get("/mytest", (request,response) -> new HTMLSparkTestService().getResponse(request, response) );
+        post("/post", (request,response) -> new HTMLSparkPostService().getResponse(request, response) );
         server.run(args);
     }
 
