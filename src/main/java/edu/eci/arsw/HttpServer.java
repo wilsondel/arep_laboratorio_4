@@ -5,6 +5,8 @@ import edu.eci.arsw.service.HttpConnection;
 import edu.eci.arsw.webapps.webServices.normalService.RestService;
 import edu.eci.arsw.webapps.webServices.sparkService.RestServiceSpark;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.*;
 import java.io.*;
 import java.util.HashMap;
@@ -35,79 +37,115 @@ public class HttpServer {
      * @throws IOException
      */
 public  void run(String[] args) throws IOException {
-        ServerSocket serverSocket = null;
+
+    String className = args[0];
+    // paso 1: cargar clase con forname
+    Class<?> c;
+    try {
+        c = Class.forName(className);
+    } catch (ClassNotFoundException e) {
+        throw new RuntimeException(e);
+    }
+    Method[] methods = c.getMethods();
+
+
+    // paso 2: extraer metodos con anotacion @RequestMapping
+    for (Method m : methods) {
+        if (m.isAnnotationPresent(RequestMapping.class)) {
+            System.out.println("si entraaa");
+            // paso 3: extraer el valor del path  ej => @RequestMapping("/pi") toma es /pi
+            RequestMapping annotation = m.getAnnotation(RequestMapping.class);
+            String path = annotation.value();
+            try {
+                System.out.println("Path: " + m.invoke(null));
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            } catch (InvocationTargetException e) {
+                throw new RuntimeException(e);
+            }
+            // paso 4: extraer una instancia del método
+
+            // paso 5: poner en la tabla el método con llave path
+
+
+        }
+    }
+
+
+
+    ServerSocket serverSocket = null;
+    try {
+        serverSocket = new ServerSocket(35000);
+    } catch (IOException e) {
+        System.err.println("Could not listen on port: 35000.");
+        System.exit(1);
+    }
+    boolean running = true;
+    while (running) {
+
+        Socket clientSocket = null;
         try {
-            serverSocket = new ServerSocket(35000);
+            System.out.println("Listo para recibir ...");
+            clientSocket = serverSocket.accept();
         } catch (IOException e) {
-            System.err.println("Could not listen on port: 35000.");
+            System.err.println("Accept failed.");
             System.exit(1);
         }
-        boolean running = true;
-        while (running) {
+        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(
+                        clientSocket.getInputStream()));
+        String inputLine, outputLine;
 
-            Socket clientSocket = null;
-            try {
-                System.out.println("Listo para recibir ...");
-                clientSocket = serverSocket.accept();
-            } catch (IOException e) {
-                System.err.println("Accept failed.");
-                System.exit(1);
+        boolean flagForPath = true;
+        String path = "/?name=test";
+        while ((inputLine = in.readLine()) != null) {
+            if (flagForPath) {
+                flagForPath = false;
+                path = inputLine.split(" ")[1];
             }
-            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(
-                            clientSocket.getInputStream()));
-            String inputLine, outputLine;
-
-            boolean flagForPath = true;
-            String path = "/?name=test";
-            while ((inputLine = in.readLine()) != null) {
-                if (flagForPath) {
-                    flagForPath = false;
-                    path = inputLine.split(" ")[1];
-                }
-                System.out.println("Received: " + inputLine);
-                if (!in.ready()) {
-                    break;
-                }
+            System.out.println("Received: " + inputLine);
+            if (!in.ready()) {
+                break;
             }
-
-            URL basePathForm = new URL("http://www.localhost:35000" + path); //http://www.localhost:35000/?t=indiana
-            String baseQueryForm = basePathForm.getQuery();
-
-            String apiResponse = "";
-            if (baseQueryForm != null) {
-                if (Cache.hasQuery(baseQueryForm)) {
-                    apiResponse = Cache.getQuery(baseQueryForm);
-                } else {
-                    apiResponse = HttpConnection.getAPIInfo(baseQueryForm);
-                    Cache.saveQuery(baseQueryForm,apiResponse );
-                }
-
-            }
-
-            outputLine="";
-            if (basePathForm.getPath().contains("/apps/")) { // localhost:35000/apps/hello
-                outputLine = executeService(basePathForm.getPath().substring(5)); // /apps/hello toma solo hello
-            } else if (basePathForm.getPath().contains("/spark/")) {
-                outputLine = executeServiceSpark(basePathForm.getPath().substring(6),basePathForm.getQuery());
-            } else if (basePathForm.getPath().contains("/public/")) {
-                outputLine = executeServiceSparkPublic(basePathForm.getPath().substring(7));
-
-            } else {
-                outputLine = htmlWithForms(apiResponse);
-            }
-
-
-            out.println(outputLine);
-
-            out.close();
-            in.close();
-            clientSocket.close();
         }
 
-        serverSocket.close();
+        URL basePathForm = new URL("http://www.localhost:35000" + path); //http://www.localhost:35000/?t=indiana
+        String baseQueryForm = basePathForm.getQuery();
+
+        String apiResponse = "";
+        if (baseQueryForm != null) {
+            if (Cache.hasQuery(baseQueryForm)) {
+                apiResponse = Cache.getQuery(baseQueryForm);
+            } else {
+                apiResponse = HttpConnection.getAPIInfo(baseQueryForm);
+                Cache.saveQuery(baseQueryForm, apiResponse);
+            }
+
+        }
+
+        outputLine = "";
+        if (basePathForm.getPath().contains("/apps/")) { // localhost:35000/apps/hello
+            outputLine = executeService(basePathForm.getPath().substring(5)); // /apps/hello toma solo hello
+        } else if (basePathForm.getPath().contains("/spark/")) {
+            outputLine = executeServiceSpark(basePathForm.getPath().substring(6), basePathForm.getQuery());
+        } else if (basePathForm.getPath().contains("/public/")) {
+            outputLine = executeServiceSparkPublic(basePathForm.getPath().substring(7));
+
+        } else {
+            outputLine = htmlWithForms(apiResponse);
+        }
+
+
+        out.println(outputLine);
+
+        out.close();
+        in.close();
+        clientSocket.close();
     }
+
+    serverSocket.close();
+}
 
 
     public String executeService(String serviceName) {

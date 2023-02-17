@@ -1,4 +1,7 @@
-edu\eci\arsw\HttpServer.class
+edu\eci\arsw\HC.class
 edu\eci\arsw\service\HttpConnection.class
 edu\eci\arsw\repository\Cache.class
+edu\eci\arsw\RequestMapping.class
+edu\eci\arsw\HttpServer.class
+edu\eci\arsw\Component.class
 edu\eci\arsw\repository\ICache.class

@@ -17,19 +17,21 @@ public class FirstApp {
 
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServer.getInstance();
+//        System.out.println(args[0]);
         // Implementación agregando servicios
-        server.addService("/hello",new HTMLService());
-        server.addService("/style",new CSSService());
-        server.addService("/javascript",new JSService());
-        server.addService("/image",new ImageService());
-
-        // Implementación usando funciones lambda similar a Spark
-        staticFiles("/public");
-        get("/spark", (request,response) -> new HTMLSparkService().getResponse(request, response) );
-        get("/mytest", (request,response) -> new HTMLSparkTestService().getResponse(request, response) );
-        post("/post", (request,response) -> new HTMLSparkPostService().getResponse(request, response) );
-        get("/message", "application/json",(request,response) -> new JSONSparkTestService().getResponse(request, response) );
+//        server.addService("/hello",new HTMLService());
+//        server.addService("/style",new CSSService());
+//        server.addService("/javascript",new JSService());
+//        server.addService("/image",new ImageService());
+//
+//        // Implementación usando funciones lambda similar a Spark
+//        staticFiles("/public");
+//        get("/spark", (request,response) -> new HTMLSparkService().getResponse(request, response) );
+//        get("/mytest", (request,response) -> new HTMLSparkTestService().getResponse(request, response) );
+//        post("/post", (request,response) -> new HTMLSparkPostService().getResponse(request, response) );
+//        get("/message", "application/json",(request,response) -> new JSONSparkTestService().getResponse(request, response) );
         server.run(args);
+        // necesariamente args[0] va a ser el nombre del servicio ruta.metodo
     }
 
 }
