@@ -4,6 +4,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.*;
 import java.io.*;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,36 +30,68 @@ public class HttpServer {
     }
 
 
+
+    private ArrayList<String> javaFilesWithAnnotation(Path path) {
+        ArrayList<String> filesList = new ArrayList<>();
+        DirectoryStream<Path> files = null;
+        try {
+            files = Files.newDirectoryStream(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (Path file: files) {
+            if(Files.isRegularFile(file) && file.toString().contains(".java")) { // muestra archivos del directorio
+
+                String fileName = file.toString().split("\\.")[0].replace("\\", ".").substring(14).strip(); //ej: de esta ruta src\main\java\edu\eci\arsw\Component deja edu.eci.arsw.Component (el nombre de la clase)
+                try {
+                    if(Class.forName(fileName).isAnnotationPresent(Component.class)){ // verifica si la anotación component esta presente
+                        System.out.println("esta presenta la anotacion en " + fileName);
+                        filesList .add(fileName);
+                    }
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        return  filesList;
+    }
+
+
+
     /**
      * @param args
      * @throws IOException
      */
 public  void run(String[] args) throws IOException {
 
-    String className = args[0];
-    // paso 1: cargar clase con forname
-    Class<?> c;
-    try {
-        c = Class.forName(className);
-    } catch (ClassNotFoundException e) {
-        throw new RuntimeException(e);
-    }
-    Method[] methods = c.getMethods();
+    ArrayList<String> myFiles = javaFilesWithAnnotation(Paths.get("src/main/java/edu/eci/arsw"));
 
-
-    // paso 2: extraer metodos con anotacion @RequestMapping
-    for (Method m : methods) {
-        if (m.isAnnotationPresent(RequestMapping.class)) {
-            System.out.println("si entraaa");
-            // paso 3: extraer el valor del path  ej => @RequestMapping("/pi") toma es /pi
-            RequestMapping annotation = m.getAnnotation(RequestMapping.class);
-            // paso 4: extraer una instancia del método
-            String pathValue = annotation.value();
-            // paso 5: poner en la tabla el método con llave path
-            System.out.println("path Value: " + pathValue);
-            servicesMethod.put(pathValue,m);
-
+//    String className = args[0];
+    for (String className : myFiles) {
+        // paso 1: cargar clase con forname
+        Class<?> c;
+        try {
+            c = Class.forName(className);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+        Method[] methods = c.getMethods();
+
+
+        // paso 2: extraer metodos con anotacion @RequestMapping
+        for (Method m : methods) {
+            if (m.isAnnotationPresent(RequestMapping.class)) {
+                // paso 3: extraer el valor del path  ej => @RequestMapping("/pi") toma es /pi
+                RequestMapping annotation = m.getAnnotation(RequestMapping.class);
+                // paso 4: extraer una instancia del método
+                String pathValue = annotation.value();
+                // paso 5: poner en la tabla el método con llave path
+                servicesMethod.put(pathValue,m);
+
+            }
+        }
+
     }
 
 
@@ -118,6 +155,7 @@ public  void run(String[] args) throws IOException {
 
     serverSocket.close();
 }
+
 
 
     public static String readFile(String fileName) throws IOException {

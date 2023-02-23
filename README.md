@@ -14,7 +14,7 @@ mvn package
 luego puedes ejecutar desde tu IDE o en la terminal
 
 ```
-java -cp .\target\classes\ edu.eci.arsw.webapps.FirstApp
+java -cp .\target\classes\ edu.eci.arsw.FirstApp
 ```
 Posteriormente ingresando a localhost:35000 se puede ver:
 
