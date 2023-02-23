@@ -5,44 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4fb6ef-59c5-4af7-90cf-b0747e2b2e47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/FirstApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HC2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/webapps/FirstApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CacheTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HttpConnectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/Cache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/repository/ICache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/service/HttpConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/FirstApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/normalService/CSSService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/normalService/HTMLService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/normalService/ImageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/normalService/JSService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/normalService/RestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkPostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/sparkService/HTMLSparkTestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/sparkService/JSONSparkTestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/webapps/webServices/sparkService/RestServiceSpark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CacheTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/HttpConnectionTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CacheTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-HttpConnectionTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CacheTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HttpConnectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_80.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +106,7 @@
       <workItem from="1675951588338" duration="15366000" />
       <workItem from="1676513596042" duration="4078000" />
       <workItem from="1676558198273" duration="9408000" />
-      <workItem from="1677169738136" duration="7207000" />
+      <workItem from="1677169738136" duration="7535000" />
     </task>
     <servers />
   </component>
