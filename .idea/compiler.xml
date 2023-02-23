@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lab" />
+        <module name="arep_laboratorio_4" />
         <module name="arep_laboratorio_3" />
         <module name="arep_laboratorio_2" />
+        <module name="lab" />
       </profile>
     </annotationProcessing>
   </component>

@@ -6,7 +6,7 @@ public class HC {
 
 
     @RequestMapping("/pi")
-    public static String piService() {
+    public static String pi() {
         return String.valueOf(Math.PI);
     }
 
